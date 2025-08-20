@@ -1,0 +1,1063 @@
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Fredoka',sans-serif;
+    background:#FFD93D;
+    color:#3b2f2f;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* ===== HEADER ===== */
+  .header{
+    background:#F2C94C;
+    color:#C97C5D;
+    padding:16px 20px;
+    min-height:90px;
+  }
+
+  .header-container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    justify-content:space-between;
+    flex-wrap:wrap;
+  }
+
+  .brand{
+  display:flex;
+  align-items:center;
+  gap:12px;}
+
+  .header-container img{
+    width:56px;
+    height:56px;
+    object-fit:cover;
+    border-radius:10px;
+    border:1px solid #814e3b;
+  }
+
+  .header-container h1{
+    font-family:'Luckiest Guy',cursive;
+    font-size:28px;
+    padding:8px 18px;
+    margin:0;
+    border:2px solid #8b4513;
+    border-radius:8px;
+    background:red;;
+    color:#FFD93D;letter-spacing:2px;box-shadow:0 2px 6px rgba(0,0,0,.15);
+  }
+
+  .social{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      flex-wrap:wrap;
+  }
+
+  .social-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-weight:600;
+    text-decoration:none;
+    color:#814e3b;
+    padding:8px 10px;
+    border-radius:10px;
+    border:1px solid #814e3b; 
+    transition:.25s;
+  }
+
+  .social-link:hover{
+      background:#f6eeec; 
+      transform:translateY(-5px);
+  }
+  .social-link svg{
+      display:block
+  }
+
+  .buy-btn{
+    padding:12px 28px;
+    background:red;
+    color:#FFD93D;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 8px 18px rgba(179,106,94,.25);
+    transition:.25s; animation:pulse 2.2s ease-in-out infinite;
+  }
+  .buy-btn:hover{
+      background:#C89F9C;
+      transform:translateY(-2px);
+  }
+  @keyframes pulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(179,106,94,.4)}
+    50%{box-shadow:0 0 0 12px rgba(179,106,94,0)}
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;             
+    align-items: center;
+    gap: 24px;
+  }
+
+  .hero video {
+    max-width: 70%;
+    height: auto;
+    border-radius: 12px; 
+  }
+
+  .hero-content h2 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: clamp(24px, 5vw, 46px);
+    line-height: 1.2;
+    margin-bottom: 12px;
+    color: #3b2f2f;
+  }
+  .contract-address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #fcebe0;
+    padding: 12px 16px;
+    border: 2px solid #8b4513;
+    border-radius: 10px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(14px, 2vw, 18px);
+    color: #3b2f2f;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .contract-address span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .copy-btn {
+    background: red;
+    color: #FFD93D;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .copy-btn:hover {
+    background: #C89F9C;
+    transform: translateY(-2px);
+  }
+
+  /* ===== ABOUT ===== */
+  .about {
+    min-height: 100vh;            
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #faf7f6;
+    padding: 80px 20px; 
+  }
+
+  .about-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: clamp(32px, 5vw, 64px);
+    color: #3b2f2f;
+    text-align: center;
+    margin-bottom: 60px; 
+  }
+
+  .about-content {
+    max-width: 1300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px; 
+    text-align: left;
+    flex-wrap: wrap;
+  }
+
+  .video-wrapper{
+ flex: 0 1 420px;           /* базовый размер видео */
+  max-width: 500px;          /* 🚫 на фулл-хд не больше этого */
+  aspect-ratio: 9 / 16;      /* вертикальный формат */
+  border: #8b4513 12px solid;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video-wrapper video{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;    
+}
+
+  .about-text-block{
+flex: 1 1 600px;
+  max-width: 700px;
+  padding: 24px 40px;
+  border: 6px solid #8b4513;
+  border-radius: 20px;
+  background: #FCEBE0;
+  box-shadow: 0 10px 28px rgba(0,0,0,.1);
+}
+
+@media (max-width: 768px){
+  .about-text-block{ flex: 1 1 100%; max-width: 680px; }
+  .about-text-block p{ max-width: 60ch; } /* можно дать свободнее */
+  .video-wrapper{ flex: 0 1 100%; max-width: 480px; margin: 0 auto; }
+}
+
+  .about-text-block p {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(16px, 2vw, 22px);
+    line-height: 1.8;
+    color: #3b2f2f;
+    margin: 0;
+    font-weight: 600;
+  }
+  /* ===== MEMES ===== */
+  .memes {
+    min-height: 100vh;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+    flex-direction: column; 
+    min-height: 100vh;     
+    padding: 40px 20px;    
+  }
+
+  .memes-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .memes-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #3b2f2f;
+  }
+
+  .memes-subtitle {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    color: #5a4a42;
+    margin-bottom: 40px;
+  }
+
+  .memes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+  }
+
+  .meme-card {
+    background: #faf7f6;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform .3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .meme-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .meme-card img {
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid #EEE2DF;
+    flex: 0 0 70%;
+  }
+
+  .meme-caption {
+    font-family: 'Fredoka', sans-serif;
+    flex: 1;  
+    font-size: clamp(22px, 1.4vw, 25px);
+    padding: 20px;
+    color: #3b2f2f;
+  }
+
+  /* ===== HOW TO BUY ===== */
+  .howtobuy {
+    min-height: 100vh;
+    background: #FFD93D;
+    padding: 70px 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .howtobuy-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .htb-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: clamp(40px, 5vw, 64px);     
+    margin-bottom: 10px;
+    color: #3b2f2f;
+  }
+
+@media (min-width: 2000px){
+  .video-wrapper{
+    max-height: 88vh;  /* на 2K+ можно позволить больше высоты */
+  }
+}
+
+  @media (max-width: 1999px){
+  .video-wrapper{
+    max-height: 78vh;  /* было выше — теперь чуть ниже экрана */
+  }
+}
+
+  .htb-subtitle {
+    font-family: 'Fredoka', sans-serif;    
+    margin-bottom: 40px; 
+    color: #5a4a42;
+    font-size: clamp(20px, 2vw, 28px);
+  }
+
+  .htb-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    gap: 24px; 
+  }
+
+  .htb-step {
+    position: relative;
+    background: #fff;
+    padding: 28px 18px;  
+    border-radius: 14px; 
+    border: 3px solid brown; 
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .htb-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+
+
+  .htb-step a{
+    text-decoration: none;      
+    color: inherit;             
+    font-weight: bold; 
+    cursor: pointer;
+  }
+
+  .htb-number {
+    position: absolute;
+    top: -16px;
+    left: 16px;
+    background: #B36A5E;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;   
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(179,106,94,.25);
+  }
+
+  .htb-icon {
+    font-size: 36px;   
+    margin-bottom: 16px;
+  }
+
+  .htb-step h3 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(20px, 1.8vw, 28px);   
+    margin-bottom: 8px;
+    color: #B36A5E;
+  }
+
+  .htb-step p {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(16px, 1.4vw, 22px);   
+    color: #3b2f2f;
+    line-height: 1.6;
+    font-weight: 600;
+  }
+
+  .htb-step .htb-image {
+    max-width: 60px;
+    border-radius: 14px;
+    border: 1px solid brown;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  }
+
+  /* ===== TOKENOMICS ===== */
+  .tokenomics {
+    min-height: 100vh;
+    background: #faf7f6;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tokenomics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .tokenomics-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: clamp(44px, 6vw, 72px);
+    margin-bottom: 12px;
+    color: #3b2f2f;
+  }
+
+  .tokenomics-subtitle {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(20px, 2vw, 28px);
+    margin-bottom: 50px;
+    color: #5a4a42;
+  }
+
+  .tokenomics-row {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: nowrap;     
+    overflow-x: auto;       
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    flex-wrap: wrap;      
+    overflow-x: hidden; 
+  }
+
+  .tokenomics-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tokenomics-card {
+    flex: 0 0 280px;  
+    background: #fff;
+    border-radius: 14px;
+    padding: 40px 28px; 
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+  }
+
+  .tokenomics-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .tokenomics-card h3 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(20px, 1.8vw, 28px);
+    margin-bottom: 8px;
+    color: #B36A5E;
+  }
+
+  .tokenomics-card p {
+    font-family: 'Fredoka', sans-serif;
+  font-size: clamp(18px, 1.6vw, 24px); 
+    font-weight: 600;
+    color: #3b2f2f;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer{
+    background:#2b2b2b;         
+    color:#ddd;
+    padding:16px 20px 24px;
+  }
+
+  .footer-container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    flex-wrap:wrap;            
+  }
+
+  .footer .brand{
+    display:flex; align-items:center; gap:12px;
+  }
+  .footer .brand img{
+    width:56px; height:56px; object-fit:cover; border-radius:10px;
+  }
+  .footer .brand h1{
+    font-family:'Luckiest Guy',cursive;
+    font-size:28px; padding:8px 18px; margin:0;
+    border:2px solid #8b4513; border-radius:8px;
+    background:red;
+    color:#FFD93D; letter-spacing:2px; box-shadow:0 2px 6px rgba(0,0,0,.15);
+  }
+
+  .footer .social{
+    display:flex; gap:14px; align-items:center; flex-wrap:wrap;
+  }
+  .footer .social-link{
+    color:#e6dcd8;                          
+    border:1px solid #494949;               
+    background:transparent;
+  }
+  .footer .social-link:hover{
+    background:#383838;                     
+    transform:translateY(-2px);
+  }
+  .footer .social-link svg{ color:currentColor; }
+
+  .buy-btn--footer{
+    box-shadow:0 8px 18px rgba(179,106,94,.35);
+  }
+
+  .footer-bottom{
+    max-width:1200px; margin:12px auto 0;
+    border-top:1px solid #3a3a3a; text-align:center; padding-top:14px;
+  }
+  .footer-bottom p{ color:#9e9e9e; font-size:14px; }
+
+  .memes-title   { font-size: clamp(26px, 4.2vw, 36px); }
+  .memes-subtitle{ font-size: clamp(14px, 2.4vw, 18px); }
+  .meme-caption  { font-size: clamp(14px, 2.2vw, 16px); }
+  .memes-container { padding: 0 16px; }
+
+  @media screen and (min-width: 3000px) {
+    .header-container img {
+      width: 100px;
+      height: 100px;
+    }
+    .header-container h1 {
+      font-size: 56px;
+      padding: 16px 30px;
+    }
+    .social-link {
+      font-size: 24px;
+      padding: 14px 20px;
+    }
+    .buy-btn {
+      font-size: 24px;
+      padding: 20px 48px;
+    }
+    .header-container {
+      max-width: 2000px;
+    }
+    .header-container h1 {
+      font-size: clamp(40px, 2.2vw, 56px);
+      padding: 16px 26px;
+      letter-spacing: 2.5px;
+    }
+    .header-container img {
+      width: 100px;
+      height: 100px;
+    }
+    .social-link {
+      font-size: 22px;
+      padding: 12px 18px;
+      border-radius: 12px;
+    }
+    .buy-btn {
+      font-size: 22px;
+      padding: 18px 44px;
+      border-radius: 12px;
+    }
+
+    .hero-container {
+      max-width: 1400px;
+    }
+    .hero video {
+      max-width: 65%;
+      border-radius: 16px;
+    }
+    .hero-content h2 {
+      font-size: clamp(48px, 2.6vw, 72px);
+    }
+    .contract-address {
+      font-size: clamp(18px, 1vw, 22px);
+      padding: 16px 22px;
+      border-width: 3px;
+      border-radius: 12px;
+    }
+    .copy-btn {
+      font-size: 18px;
+      padding: 12px 20px;
+    }
+    .about{
+      padding: 120px 60px;
+    }
+    .about-content{
+      max-width: 2000px;
+      gap: 120px;
+    }
+    .about-title{
+      font-size: clamp(56px, 2.6vw, 96px);
+      margin-bottom: 80px;
+    }
+    .about-media img{
+      max-width: 800px;
+      border-width: 10px;
+      border-radius: 32px;
+      box-shadow: 0 28px 64px rgba(0,0,0,.24);
+    }
+    .about-text-block{
+      padding: 36px 60px;
+      border-width: 10px;
+      border-radius: 28px;
+    }
+    .about-text-block p{
+      font-size: clamp(22px, 1vw, 30px);
+      line-height: 1.8;
+    }
+    .memes-container {
+      max-width: 2000px;
+    }
+
+    .memes-title {
+      font-size: 64px;
+    }
+
+    .memes-subtitle {
+      font-size: 28px;
+      margin-bottom: 80px;
+    }
+
+    .memes-grid {
+      gap: 48px;
+    }
+
+    .meme-caption {
+      font-size: 26px;
+      padding: 28px;
+    }
+  }
+
+  @media screen and (min-width: 2000px) {
+    .header-container img {
+      width: 120px;
+      height: 120px;
+    }
+    .header-container h1 {
+      font-size: 60px;
+      padding: 18px 36px;
+    }
+    .social-link {
+      font-size: 30px;
+      padding: 18px 24px;
+    }
+    .buy-btn {
+      font-size: 30px;
+      padding: 24px 54px;
+    }
+    .header-container {
+      max-width: 2400px;
+    }
+    .header-container h1 {
+      font-size: clamp(48px, 3vw, 66px);
+      padding: 18px 30px;
+    }
+    .header-container img {
+      width: 120px;
+      height: 120px;
+    }
+    .social-link {
+      font-size: 27px;
+      padding: 15px 21px;
+    }
+    .buy-btn {
+      font-size: 27px;
+      padding: 21px 48px;
+    }
+
+    .hero-container {
+      max-width: 1650px;
+      gap: 42px;
+    }
+    .hero video {
+      max-width: 70%; 
+    }
+    .hero-content h2 {
+      font-size: clamp(54px, 4.5vw, 96px);
+    }
+    .contract-address {
+      font-size: clamp(24px, 1.8vw, 30px);
+      padding: 21px 27px;
+    }
+    .copy-btn {
+      font-size: 24px;
+      padding: 15px 24px;
+    }
+    .about {
+      padding: 150px 60px;
+    }
+    .about-content {
+      max-width: 2400px;
+      gap: 150px;
+    }
+    .about-title {
+      font-size: clamp(72px, 4.5vw, 120px);
+      margin-bottom: 105px;
+    }
+    .about-media img {
+      max-width: 960px;            
+      border-width: 12px;
+      border-radius: 42px;
+      box-shadow: 0 30px 72px rgba(0,0,0,.22);
+    }
+    .about-text-block {
+      padding: 42px 72px;
+      border-width: 12px;
+      border-radius: 36px;
+    }
+    .about-text-block p {
+      font-size: clamp(30px, 1.8vw, 39px);
+      line-height: 1.75;
+    }
+    .memes {
+      padding: 120px 60px;
+    }
+
+    .memes-container {
+      max-width: 2400px;
+    }
+
+    .memes-title {
+      font-size: 78px;
+      margin-bottom: 30px;
+    }
+
+    .memes-subtitle {
+      font-size: 36px;
+      margin-bottom: 90px;
+    }
+
+    .memes-grid {
+      gap: 60px;
+    }
+
+    .meme-caption {
+      font-size: 33px;
+      padding: 36px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .howtobuy { padding: 135px 36px; }
+
+    .howtobuy-container { max-width: 2100px; }
+
+    .htb-steps { 
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
+    }
+
+    .htb-title { font-size: clamp(78px, 6vw, 108px); }
+    .htb-subtitle { font-size: clamp(36px, 2.4vw, 45px); }
+
+    .htb-step { 
+      padding: 54px 36px; 
+      border-radius: 24px;
+      box-shadow: 0 15px 36px rgba(0,0,0,0.08);
+    }
+
+    .htb-icon { font-size: 66px; margin-bottom: 27px; }
+
+    .htb-step h3 { font-size: clamp(33px, 2vw, 45px); }
+    .htb-step p  { font-size: clamp(27px, 1.65vw, 36px); }
+
+    .htb-number {
+      top: -27px; left: 27px;
+      width: 63px; height: 63px;
+      font-size: 27px;
+    }
+
+    .htb-step .htb-image {
+      max-width: 120px;
+    }
+
+    .tokenomics-container { max-width: 2100px; }
+    .tokenomics-row { gap: 54px; }
+
+    .tokenomics-title   { font-size: clamp(84px, 6vw, 114px); }
+    .tokenomics-subtitle{ font-size: clamp(36px, 2.1vw, 48px); margin-bottom: 90px; }
+
+    .tokenomics-card {
+      flex: 1 1 480px;
+      max-width: 630px;          
+      padding: 72px 48px;
+      border-radius: 27px;
+      box-shadow: 0 15px 36px rgba(0,0,0,0.1);
+    }
+    .tokenomics-card h3 { font-size: clamp(33px, 2.1vw, 45px); }
+    .tokenomics-card p  { font-size: clamp(30px, 1.8vw, 39px); }
+
+    .footer-container {
+      max-width: 2100px;
+      gap: 33px;
+    }
+    .footer .brand img {
+      width: 108px; height: 108px;
+    }
+    .footer .brand h1 {
+      font-size: 54px;
+      padding: 15px 30px;
+      letter-spacing: 3px;
+    }
+    .footer .social-link {
+      font-size: 27px;
+      padding: 15px 21px;
+      border-radius: 15px;
+    }
+    .buy-btn--footer {
+      font-size: 27px;
+      padding: 21px 48px;
+      border-radius: 18px;
+    }
+    .footer-bottom {
+      max-width: 2100px;
+    }
+    .footer-bottom p {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .memes-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .memes {
+      display: flex;
+      align-items: center;   
+      justify-content: center; 
+      flex-direction: column; 
+      min-height: 100vh;     
+      padding: 40px 20px;    
+    }
+  }
+
+  @media (max-width: 900px) {
+    .header-container{
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      gap:12px;
+    }
+    .brand{
+      justify-content:center;
+    }
+    .social{
+      justify-content:center;
+    }
+    .buy-btn{
+      align-self:center;
+    }
+    .about-content {
+      gap: 40px; 
+    }
+    .about-media img {
+      max-width: 400px;
+    }
+
+    .memes { 
+      padding: 60px 20px; 
+    }
+
+    .memes-grid {
+          grid-template-columns: repeat(3, 1fr);
+      }
+    .meme-card { 
+      border-radius: 12px; 
+    }
+
+    .tokenomics-row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .tokenomics-card {
+      flex: 1 1 45%;
+      min-width: 220px;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+    .footer .social {
+      justify-content: center;
+    }
+    .buy-btn--footer {
+      width: 100%;
+      max-width: 240px;
+    }
+    .hero {
+      padding: 20px 16px;
+      min-height: 80vh;
+    }
+    .hero video {
+      max-width: 100%;  
+    }
+    .about-content {
+      flex-direction: column; /* ✅ складываем в колонку */
+      text-align: center;
+      gap: 32px;
+    }
+    .about-text-block {
+      margin: 0; /* убираем боковые отступы */
+      width: 100%;
+    }
+    .memes-grid {
+          grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+  .header-container h1{
+      font-size:22px;
+      padding:6px 12px;
+    }
+    .header-container img{
+      width:44px;
+      height:44px;
+    }
+    .social-link{
+      font-size:14px;
+      padding:6px 8px;
+    }
+    .buy-btn{
+      padding:10px 70px;
+      font-size:14px;
+    }
+    .about-title {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+
+    .about-media img {
+      max-width: 220px;
+      border-radius: 14px;
+    }
+
+    .about-text {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .memes { padding: 48px 16px; }
+    .memes-grid {
+      grid-template-columns: 1fr; /* только 1 колонка */
+      gap: 20px; /* немного уменьшим отступ */
+    }
+
+    .meme-card {
+      max-width: 100%; /* карточка тянется на всю ширину */
+    }
+    .meme-card img { border-bottom-width: 1px; }
+
+    .tokenomics {
+      padding: 60px 16px;
+    }
+    .tokenomics-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+    .tokenomics-card {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+  @media (max-width: 480px) {
+    .hero {
+    min-height: 80vh;
+    }
+    .hero-content h2 {
+      font-size: clamp(20px, 7vw, 32px);
+    }
+    .hero-content p {
+      font-size: 15px;
+    }
+    .hero-content .btn {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+    .contract-address {
+      flex-direction: column;  
+      align-items: stretch;     
+      text-align: center;
+      gap: 8px;
+    }
+
+    .contract-address span {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .copy-btn {
+      width: 100%;   
+      font-size: 15px;
+      padding: 10px;
+    }
+    .about {
+      padding: 50px 16px;
+    }
+    .about-title {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+    .about-media img {
+      max-width: 100%;
+    }
+    .about-text-block {
+      padding: 16px 20px;
+      border-width: 4px;
+    }
+    .about-text-block p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  }
+  @media (max-width: 380px) {
+    .memes-grid {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 86%;
+      overflow-x: auto;
+      gap: 14px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .meme-card { scroll-snap-align: start; }
+    .memes-grid::-webkit-scrollbar { display: none; }
+  }
